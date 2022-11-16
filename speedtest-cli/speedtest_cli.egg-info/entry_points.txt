@@ -1,0 +1,3 @@
+[console_scripts]
+speedtest = speedtest:main
+speedtest-cli = speedtest:main
