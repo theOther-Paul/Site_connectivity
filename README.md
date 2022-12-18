@@ -9,9 +9,9 @@ A GUI desktop app that checks if a site exists and is/isn't online and can help 
 
 The testing part covers functonal testing and an attempt at UI testing, using pixel arrays took from screen captures
 
-#To be implemented
+# To be implemented
 - a help webpage
 
-#To be extended
+# To be extended
 - the app functionality
 
