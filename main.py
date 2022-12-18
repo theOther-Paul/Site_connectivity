@@ -7,6 +7,7 @@ from tkinter.messagebox import showinfo, showerror, showwarning
 import web_check
 import tkcap
 import time
+from tkinter import Menu
 
 
 # global variable
@@ -24,7 +25,8 @@ class Window(Frame):
         showinfo(title="Theme changed", message=f"Currently using {theme} theme")
         self.get_screenshot(self.master)
 
-    def get_screenshot(self, master) -> object:
+    @staticmethod
+    def get_screenshot(master):
         cap = tkcap.CAP(master)
         cap.capture(f'ui_testing/shot {time.time()}.bmp')
 
@@ -59,6 +61,11 @@ def enable_partial_url(choice, url, mute=True):
             error_message(url)
 
 
+def get_help():
+    import webbrowser
+    webbrowser.open("feature/get_help.html")
+
+
 def main():
     root: ThemedTk = ThemedTk()
     app = Window(root)
@@ -85,6 +92,9 @@ def main():
     theme_menu = Menu(main_menu, tearoff=0)
     main_menu.add_cascade(label="Themes", menu=theme_menu)
     extra_themes = root.get_themes()
+
+    # new menu option
+    main_menu.add_command(label='Help', command=lambda: get_help())
 
     for t in extra_themes:
         theme_menu.add_command(label=t, command=lambda t=t: app.change_theme(t))
