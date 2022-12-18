@@ -90,14 +90,31 @@ def test_humansize_big():
 def test_change_theme():
     img1 = Image.open('ui_testing/shot 1668188266.0341837.bmp')
     img2 = Image.open('ui_testing/shot 1668188267.5604727.bmp')
-    pixel_checklist = [[85, 244], [148, 41], [136, 421]]
+    pixel_checklist = [[85, 244], [148, 41], [136, 421], [50, 50]]
     img1_np = np.array(img1, dtype=np.uint8)
     img2_np = np.array(img2, dtype=np.uint8)
     diff = False
     for position in pixel_checklist:
-        if (np.array_equal(img1_np, img2_np)):
+        if np.array_equal(img1_np, img2_np):
             diff = True
         else:
             diff = False
-
     assert diff is False
+
+
+def test_is_get_help():
+    from os.path import exists
+    help_path = 'feature/get_help.html'
+    file_exists = exists(help_path)
+    if file_exists:
+        assert True
+    else:
+        assert False
+
+
+def test_is_html():
+    test_file = 'feature/get_help.html'
+    if test_file.endswith('.html'):
+        assert True
+    else:
+        assert False
