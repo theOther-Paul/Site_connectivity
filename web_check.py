@@ -71,11 +71,3 @@ def humansize(nbytes: float):
         i += 1
     f = ('%.2f' % nbytes).rstrip('0').rstrip('.')
     return '%s %s' % (f, suffixes[i])
-
-# def main():
-#     speed = DoubleVar()
-#     print(get_speed(speed))
-#
-#
-# if __name__ == '__main__':
-#     main()
