@@ -1,0 +1,72 @@
+/* General page style */
+body {
+    background-color: #181A1B;
+    color: rgb(243, 223, 223);
+    font: 90% Roboto, Arial, sans-serif;
+    font-weight: 300;
+}
+
+p {
+    padding: 0 10px;
+    line-height: 1.8;
+}
+
+ul li {
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+h3 {
+    padding: 5px 20px;
+    margin: 0;
+}
+
+/* General header style */
+div#header h1 {
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+    color: #e0e0e0;
+    background: #292929;
+    position: flex;
+}
+
+/* General navigation style */
+div#navigation {
+    background: #064F61;
+}
+
+div#navigation li {
+    list-style: square;
+}
+
+div#navigation {
+    float: left;
+    width: 29.9%;
+}
+
+div#wrapper {
+    float: right;
+    width: 70%;
+}
+
+/* Extra section Style */
+div#extra {
+    background: #147FA9;
+}
+
+div#extra {
+    clear: both;
+    width: 100%;
+}
+
+/* Footer Style */
+div#footer {
+    background: #42444e;
+    color: #fff;
+}
+
+div#footer p {
+    padding: 20px 10px;
+}
